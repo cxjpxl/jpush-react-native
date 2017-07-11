@@ -137,6 +137,7 @@ public class JPushModule extends ReactContextBaseJavaModule {
                     map = Arguments.createMap();
                     map.putString("alertContent", mCachedBundle.getString(JPushInterface.EXTRA_ALERT));
                     map.putString("extras", mCachedBundle.getString(JPushInterface.EXTRA_EXTRA));
+    		    map.putString("notificationId", mCachedBundle.getInt(JPushInterface.EXTRA_NOTIFICATION_ID)+"");//cxj add
                     mRAC.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                             .emit(mEvent, map);
                     break;
